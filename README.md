@@ -57,3 +57,17 @@ Simply execute the compiled automated orchestration workflows via standard make 
 - **Keyboard Interrupts:** Setup an IDT (Interrupt Descriptor Table) to handle user inputs.
 - **Memory Allocation:** Implement a physical memory manager and a basic heap allocation algorithm (`malloc`).
 - **File System:** Write an implementation for a simple architecture file structure layout like FAT12.
+
+## 🐳 Developing with Docker (Recommended for Mac/Windows)
+
+If you don't want to install toolchains locally, build and run the project using Docker:
+
+1. **Build the container image:**
+   ```bash
+   docker build -t buy-os-builder .
+   ```
+
+2. **Compile the OS using the container:**
+   ```bash
+   docker run --rm -v \$(pwd):/os-workspace buy-os-builder make
+   ```
