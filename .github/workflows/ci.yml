@@ -1,0 +1,32 @@
+name: OS Build CI
+
+on:
+  push:
+    branches: [ "main", "master" ]
+  pull_request:
+    branches: [ "main", "master" ]
+
+jobs:
+  build:
+    runs-name: Compile and Verify OS Image
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository code
+      uses: actions/checkout@v4
+
+    - name: Install Build Toolchain Dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y nasm gcc-multilib build-essential
+
+    - name: Compile OS Image Binaries
+      run: make
+
+    - name: Check Artifact Production
+      run: |
+        if [ ! -f "os-image.bin" ]; then
+          echo "Error: os-image.bin was not generated!"
+          exit 1
+        fi
+        echo "Success: OS image built correctly."
