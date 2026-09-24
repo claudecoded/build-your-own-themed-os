@@ -1,0 +1,15 @@
+# Compiled binaries and images
+*.bin
+*.img
+*.iso
+
+# Object files and link outputs
+*.o
+*.out
+*.sys
+
+# IDE configurations and system files
+.DS_Store
+.vscode/
+.idea/
+*.swp
