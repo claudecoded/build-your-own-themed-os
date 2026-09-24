@@ -1,3 +1,5 @@
+<img width="1456" height="720" alt="image" src="https://github.com/user-attachments/assets/9d7e83bc-3e84-4500-8f76-30dc0b7df8ca" />
+
 # Build Your Own OS 🚀
 
 Welcome to the ultimate base boilerplate template to build your very own standalone x86 Operating System from absolute scratch. This repository contains a fully working 16-bit Bootloader, transitions directly to 32-bit Protected Mode, loads a custom freestanding C Kernel into physical memory, and initializes an independent visual framework on screen.
